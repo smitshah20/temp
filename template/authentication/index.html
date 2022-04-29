@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link ref="stylesheet" href="front.css">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color:grey;
+            font-family:Gill Sans MT;
+            background-color: #80ced6;
+            font-size: 70px;
+        }
+
+         
+    </style>
+</head>
+<body style="background-color: rgb(54, 144, 218);" >
+    
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role = "alert">
+        <strong>Message:</strong> {{ message }}
+        <button class="btn btn-danger close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    <div>
+        <div>
+            <div>
+               
+                <img src="{% static 'image/123.png' %}" width="300" style="margin-left: 1000px; margin-bottom: 60px; margin-top: 40px;">
+            </div>
+            <div>
+                <h1>The Shoppers</h1>
+            </div>
+            
+        </div>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="container" style="background-color: #80ced6; margin-bottom: 100px; margin-top: 130px;">
+        <h3 style="font-size: 60px; text-align:center; color:grey;">Welcome</h3>
+        <p style="font-size: 50px; text-align:center; color:grey;">Albi's Analytics Report</p>
+    </div>
+    <div class="container" style="background-color: rgb(83, 156, 122); margin-top: 1px;">
+        <p style="font-size: 5px; text-align:center; color:grey;"></p>   
+    </div>
+    <div class="container" style="background-color: #80ced6; margin-bottom: 200px; margin-top: 1px;">
+        <h3 style="font-size: 25px; text-align:left; color:grey;">Our Objevtive here, is to create a strategy report to retain Albi's customer base and increase it. 
+            <br><br>
+
+            This strategies that we have created, have invovled various schemes and offers that the store can put out, which will help them meet the decided objectives. 
+            
+            Our report not only covers the schemes/offers on particular products, but also at what time they must be put, to meet the objectives. 
+            <br> <br>
+            For this we have analysied the data of Albi's international retail departmental stores across the world. The data we perfomed our analysis for are of period length of 1 year, starting from December of 2010 to December of 2011. The data we collected involves 5 main attributes, Product name, Quantity Bought, Date of Purchase, Unit Price and Customer ID. This factors were used by us to create multiple graphs and strategies to attain our objective. 
+            <br><br>
+            
+            As the objectives states, the primary goal is to retain the current base and then to increase the customer base, therefore we designed 3 data conclusions based on the 3 following graph: <br><br></h3>   
+    </div>
+
+
+    <div class="container" style="background-color: rgb(83, 156, 122); margin-bottom: 20px; margin-top: 1px;">
+        <h3 style="font-size: 20px; text-align:center; color:grey;"></h3>   
+    </div>
+    <div class="container" style="background-color: #80ced6; margin-bottom: 20px; margin-top: 1px;">
+        <h3 style="font-size: 30px; text-align:center; color:grey;">Graphical Representation of Products with Highest Unit Price</h3>   
+    </div>
+    <div class="container" style="background-color: rgb(83, 156, 122); margin-bottom: 20px; margin-top: 1px;">
+        <h3 style="font-size: 20px; text-align:center; color:grey;"></h3>   
+    </div>
+
+
+    <div class="container" style="background-color: rgb(54, 144, 218); margin-bottom: 75px; text-align:center;">
+    <img src="{% static 'image/G1.jpeg' %}" width="900">
+    </div>
+
+    <div class="container" style="background-color: rgb(83, 156, 122); margin-bottom: 20px; margin-top: 1px;">
+        <h3 style="font-size: 20px; text-align:center; color:grey;"></h3>   
+    </div>
+    <div class="container" style="background-color: #80ced6; margin-bottom: 20px; margin-top: 1px;">
+        <h3 style="font-size: 30px; text-align:center; color:grey;">Graphical Representation of Highest Prodcuts Sold</h3>   
+    </div>
+    <div class="container" style="background-color: rgb(83, 156, 122); margin-bottom: 20px; margin-top: 1px;">
+        <h3 style="font-size: 20px; text-align:center; color:grey;"></h3>   
+    </div>
+
+
+    <div class="container" style="background-color: rgb(54, 144, 218); text-align:center; margin-bottom: 75px;">
+    <img src="{% static 'image/G2.jpeg' %}" width="900">
+    </div>
+
+    <div class="container" style="background-color: rgb(83, 156, 122); margin-bottom: 20px; margin-top: 20px;">
+        <h3 style="font-size: 20px; text-align:center; color:grey;"></h3>   
+    </div>
+    <div class="container" style="background-color: #80ced6; margin-bottom: 20px; margin-top: 1px;">
+        <h3 style="font-size: 30px; text-align:center; color:grey;">Customer Retention Model</h3>   
+    </div>
+    <div class="container" style="background-color: rgb(83, 156, 122); margin-bottom: 20px; margin-top: 1px;">
+        <h3 style="font-size: 20px; text-align:center; color:grey;"></h3>   
+    </div>
+
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-md-2 mb-3" style="color:#80ced6;">
+                <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="dec-tab" data-toggle="tab" href="#dec" role="tab" aria-controls="dec" aria-selected="true" style="color:#80ced6;">December 2010</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="jan-tab" data-toggle="tab" href="#jan" role="tab" aria-controls="jan" aria-selected="false" style="color:#80ced6;">January 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="feb-tab" data-toggle="tab" href="#feb" role="tab" aria-controls="feb" aria-selected="false" style="color:#80ced6;">February 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="mar-tab" data-toggle="tab" href="#mar" role="tab" aria-controls="mar" aria-selected="false" style="color:#80ced6;">March 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="apr-tab" data-toggle="tab" href="#apr" role="tab" aria-controls="apr" aria-selected="false" style="color:#80ced6;">April 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="may-tab" data-toggle="tab" href="#may" role="tab" aria-controls="may" aria-selected="false" style="color:#80ced6;">May 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="jun-tab" data-toggle="tab" href="#jun" role="tab" aria-controls="jun" aria-selected="false" style="color:#80ced6;">June 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="jul-tab" data-toggle="tab" href="#jul" role="tab" aria-controls="jul" aria-selected="false" style="color:#80ced6;">July 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="aug-tab" data-toggle="tab" href="#aug" role="tab" aria-controls="aug" aria-selected="false" style="color:#80ced6;">August 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="sep-tab" data-toggle="tab" href="#sep" role="tab" aria-controls="sep" aria-selected="false" style="color:#80ced6;">September 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="oct-tab" data-toggle="tab" href="#oct" role="tab" aria-controls="oct" aria-selected="false" style="color:#80ced6;">October 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nov-tab" data-toggle="tab" href="#nov" role="tab" aria-controls="nov" aria-selected="false" style="color:#80ced6;">November 2011</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="decc-tab" data-toggle="tab" href="#decc" role="tab" aria-controls="decc" aria-selected="false" style="color:#80ced6;">December 2011</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.col-md-4 -->
+            <div class="col-md-10">
+                <div class="tab-content" id="myTabContent" style="margin-left: 100px;">
+                    <div class="tab-pane fade" id="dec" role="tabpanel" aria-labelledby="dec-tab">
+                        <img src="{% static 'image/dec2010.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="jan" role="tabpanel" aria-labelledby="jan-tab">
+                        <img src="{% static 'image/jan2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="feb" role="tabpanel" aria-labelledby="feb-tab">
+                        <img src="{% static 'image/feb2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="mar" role="tabpanel" aria-labelledby="mar-tab">
+                        <img src="{% static 'image/mar2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="apr" role="tabpanel" aria-labelledby="apr-tab">
+                        <img src="{% static 'image/apr2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="may" role="tabpanel" aria-labelledby="may-tab">
+                        <img src="{% static 'image/may2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="jun" role="tabpanel" aria-labelledby="jun-tab">
+                        <img src="{% static 'image/jun2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="jul" role="tabpanel" aria-labelledby="jul-tab">
+                        <img src="{% static 'image/jul2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="aug" role="tabpanel" aria-labelledby="aug-tab">
+                        <img src="{% static 'image/aug2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="sep" role="tabpanel" aria-labelledby="sep-tab">
+                        <img src="{% static 'image/sep2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="oct" role="tabpanel" aria-labelledby="oct-tab">
+                        <img src="{% static 'image/oct2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade" id="nov" role="tabpanel" aria-labelledby="nov-tab">
+                        <img src="{% static 'image/nov2011.png' %}" class="" alt="" width="900">
+                    </div>
+                    <div class="tab-pane fade show active" id="decc" role="tabpanel" aria-labelledby="decc-tab">
+                        <img src="{% static 'image/dec2011.png' %}" class="" alt="" width="900">
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-md-8 -->
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    
+    <br><br>
+    <div class="text-center">
+        
+        <button type="submit" class="btn btn-danger button" style="background-color:#80ced6; border-color:grey; box-shadow: 2px 4px #888888; border-radius: 8px;"><a href="/graph" style="color:grey; font-family:Gill Sans MT; font-weight:bold; " >Report</a></button>
+    <br>
+    <br>
+    </div>
+
+    {% else %}
+    <br>
+    <div class="text-center" >
+        <button type="submit" class="btn btn-success button" style="background-color:#80ced6; border-color:grey; box-shadow: 2px 4px #888888; border-radius: 8px; transition-duration: 0.4s;"> <a href="/signup" style="color:grey; font-family:Gill Sans MT; font-weight:bold;">Sign-Up</a></button>
+        <button type="submit" class="btn btn-info button" style="background-color:#80ced6; border-color:grey; box-shadow: 2px 4px #888888; border-radius: 8px;"> <a href="/signin" style="color:grey; font-family:Gill Sans MT; font-weight:bold;">Sign-In</a></button>
+    </div>
+    {% endif %}
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html> 

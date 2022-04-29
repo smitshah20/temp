@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Graph</title>
+    
+    <style>
+        .button {color:black;
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 20px;
+                font-weight: bold;
+                transition-duration: 0.4s;
+                background-color: #80ced6;
+                
+        }
+
+        .button:hover {
+            background-color: rgb(83, 156, 122); /* Green */
+            color: grey;
+          }
+    </style>
+</head>
+
+<body style="background-color: rgb(54, 144, 218);">
+    
+<div style="text-align:center;">    
+    <img src="{% static 'image/r0.png' %}" width="900" style="margin-bottom:25px;">
+    <img src="{% static 'image/r1.png' %}" width="900" style="margin-bottom:20px;">
+    <img src="{% static 'image/r2.png' %}" width="900">
+    <img src="{% static 'image/r3.png' %}" width="900" style="margin-bottom:20px;">
+    <img src="{% static 'image/r4.png' %}" width="900" style="margin-bottom:20px;">
+    <img src="{% static 'image/r5.png' %}" width="900" style="margin-bottom:0px;">
+</div>
+    <form action="/graph" method="post" style="margin-left: 500px; margin-top: 25px;">
+        <button type="submit" class="btn btn-danger button" ><a style=" color:grey; font-family:Gill Sans MT; font-weight:bold;" href="/signout">Sign-Out</a></button>
+        <a href="/static/pdf/Report.pdf" download>
+            <button type="button" class="btn btn-danger button" style="color:grey; font-family:Gill Sans MT; font-weight:bold;" >Download</button>
+            </a>
+    </form>
+
+</body>
+</html>
